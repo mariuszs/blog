@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 	    <meta charset="utf-8" />
-	    <title>Czcionki w Fedorze</title>
+	    <title>jBake, Gradle and GitHub</title>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	    <meta name="description" content="" />
 	    <meta name="author" content="" />
@@ -59,51 +59,54 @@
 		<div class="container">
 	
 			<div class="page-header">
-				<h1>Czcionki w Fedorze</h1>
+				<h1>jBake, Gradle and GitHub</h1>
 			</div>
 		
-			<p><em>11 października 2014</em></p>
+			<p><em>17 października 2014</em></p>
 		
-			<p><h2>Czcionki</h2><p>Silnik renderowania czcionek z włączonym renderowaniem subpikselowym - możemy go legalnie używać, ponieważ nie obowiązują w naszym kraju patenty na oprogramowanie.</p>
-<pre><code>sudo yum install freetype-freeworld
-</code></pre><p>Nie polecam korzystania z <a href="http://www.infinality.net/blog/">Infinality</a> projekt najwyraźniej nie jest już dłużej rozwijany (ostatnia wydanie jest z 2013-05-15). Pojawił się za to nowy projekt <a href="http://bohoomil.com/">http://bohoomil.com/</a>, aktualnie bez wsparcia dla Fedory. </p><p><a href="https://code.google.com/p/noto/">Google noto fonts</a></p>
-<pre><code>sudo yum install google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-symbols-fonts  
-</code></pre><p><a href="https://android.googlesource.com/">Google Droid fonts</a></p>
-<pre><code>sudo yum install google-droid-serif-fonts google-droid-sans-mono-fonts google-droid-sans-fonts  
-</code></pre><p><a href="http://www.levien.com/type/myfonts/inconsolata.html">Inconsolata</a></p>
-<pre><code>sudo yum install levien-inconsolata-fonts                  
-</code></pre><h2>Konfiguracja czcionek</h2><p>Jeśli korzystamy z monitora LCD należy ustawić odpowiedni filtr </p>
-<pre><code>sudo ln -s /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/11-lcdfilter-default.conf
-</code></pre><p>Hinting i wygładzanie RGB</p>
-<pre><code>gsettings &quot;set&quot; &quot;org.gnome.settings-daemon.plugins.xsettings&quot; &quot;hinting&quot; &quot;slight&quot;     
-</code></pre><p>Aby poprawnie ustawić wygładzanie RGB należy <a href="http://www.lagom.nl/lcd-test/subpixel.php">sprawdzić posiadaną matrycę</a>. </p><p>Ustawienie per użytkownika </p>
-<pre><code>gsettings &quot;set&quot; &quot;org.gnome.settings-daemon.plugins.xsettings&quot; &quot;antialiasing&quot; &quot;rgba&quot;    
-</code></pre><p>Ustawienia globalne przez mechanizm fontconfig (zalecane)</p>
-<pre><code>sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/10-sub-pixel-rgb.conf    
-</code></pre><p>W konfiguracji tych opcji można nam pomóc <a href="https://wiki.gnome.org/action/show/Apps/GnomeTweakTool?action=show&redirect=GnomeTweakTool">gnome-tweak-tool</a></p>
-<pre><code>yum install gnome-tweak-tool
-</code></pre><p>Efekt konfiguracji można zweryfikować poleceniem <code>xrdb -query</code> </p>
-<pre><code>Xft.antialias:  1
-Xft.dpi:    120
-Xft.hinting:    1
-Xft.hintstyle:  hintfull
-Xft.lcdfilter:  lcddefault
-Xft.rgba:   rgb
-</code></pre><p>Własne konfiguracje dla czcionek należy umieszczać w katalogu <code>~/.config/fontconfig/conf.d</code> lub pliku <code>~/.config/fontconfig/fonts.conf</code>.</p><h2>Warto poczytać:</h2>
+			<p><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Generating project structure</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbake -i thymeleaf</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Open blog in browser at <a href="http://localhost:8820">http://localhost:8820</a></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jbake -s build/jbake/</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="more">More</h2>
+<div class="sectionbody">
+<div class="ulist">
 <ul>
-  <li><a href="https://www.happyassassin.net/2014/01/17/fonts-and-font-sizes-in-fedora-on-the-internet-hold-onto-your-hats/">Fonts and font sizes in Fedora on the internet: hold onto your hats…</a></li>
-  <li><a href="http://www.binarytides.com/gorgeous-looking-fonts-ubuntu-linux/">How to get gorgeous looking fonts on ubuntu linux</a></li>
-  <li><a href="http://blog.andreas-haerter.com/2011/07/18/tune-improve-fedora-fonts-typeface-ubuntu-like-sharp-fonts">How to change Fedora's font rendering to get an Ubuntu-like result</a></li>
-  <li><a href="http://wiki.gentoo.org/wiki/Fontconfig">Gentoo Wiki - Fontconfig</a></li>
-</ul></p>
+<li>
+<p><a href="http://melix.github.io/blog/2014/02/hosting-jbake-github.html">Authoring your blog on GitHub with JBake and Gradle</a></p>
+</li>
+<li>
+<p><a href="http://blog.ackx.net/blogguer-sous-github-avec-jbake.html">Blogguer sous GitHub avec JBake</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div></p>
 		
 			<hr />
             <div id="disqus_thread"></div>
             <script type="text/javascript" xml:space="preserve">
                 var disqus_shortname = 'mariuszs';
-                var disqus_identifier = 'blog/2014/fedora-fonts.html';
-                var disqus_title = 'Czcionki w Fedorze';
-                var disqus_url = 'http://mariuszs.github.io/blog/blog/2014/fedora-fonts.html';
+                var disqus_identifier = 'blog/2014/jbake_gradle_and_github.html';
+                var disqus_title = 'jBake, Gradle and GitHub';
+                var disqus_url = 'http://mariuszs.github.io/blog/blog/2014/jbake_gradle_and_github.html';
 
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {

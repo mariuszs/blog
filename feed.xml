@@ -1,53 +1,85 @@
-<?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JBake</title>
     <link>http://mariuszs.github.io/blog/</link>
-    <atom:link href="http://mariuszs.github.io/blog//feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://mariuszs.github.io/blog//feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>So, 11 paź 2014 16:25:41 +0200</pubDate>
-    <lastBuildDate>So, 11 paź 2014 16:25:41 +0200</lastBuildDate>
+    <pubDate>So, 11 paź 2014 17:32:34 +0200</pubDate>
+    <lastBuildDate>So, 11 paź 2014 17:32:34 +0200</lastBuildDate>
 
     <item>
       <title>Czcionki w Fedorze</title>
       <link>http://mariuszs.github.io/blog//blog/2014/fedora-fonts.html</link>
       <pubDate>So, 11 paź 2014 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2014/fedora-fonts.html</guid>
-      	<description>
-	&lt;h2&gt;Czcionki&lt;/h2&gt;&lt;p&gt;Silnik renderowania czcionek z włączonym renderowaniem subpikselowym - możemy go legalnie używać, ponieważ nie obowiązują w naszym kraju patenty na oprogramowanie.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo yum install freetype-freeworld
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Nie polecam korzystania z &lt;a href=&quot;http://www.infinality.net/blog/&quot;&gt;Infinality&lt;/a&gt; projekt najwyraźniej nie jest już dłużej rozwijany (ostatnia wydanie jest z 2013-05-15). Pojawił się za to nowy projekt &lt;a href=&quot;http://bohoomil.com/&quot;&gt;http://bohoomil.com/&lt;/a&gt;, aktualnie bez wsparcia dla Fedory. &lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://code.google.com/p/noto/&quot;&gt;Google noto fonts&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo yum install google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-symbols-fonts  
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;https://www.google.com/fonts/specimen/Roboto&quot;&gt;Google Roboto fonts&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo yum install &amp;quot;google-roboto-*&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;http://www.levien.com/type/myfonts/inconsolata.html&quot;&gt;Inconsolata&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo yum install levien-inconsolata-fonts                  
-&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Konfiguracja czcionek&lt;/h2&gt;&lt;p&gt;Jeśli korzystamy z monitora LCD należy ustawić odpowiedni filtr &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo ln -s /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/11-lcdfilter-default.conf
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hinting i wygładzanie RGB&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gsettings &amp;quot;set&amp;quot; &amp;quot;org.gnome.settings-daemon.plugins.xsettings&amp;quot; &amp;quot;hinting&amp;quot; &amp;quot;slight&amp;quot;     
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Aby poprawnie ustawić wygładzanie RGB należy &lt;a href=&quot;http://www.lagom.nl/lcd-test/subpixel.php&quot;&gt;sprawdzić posiadaną matrycę&lt;/a&gt;. &lt;/p&gt;&lt;p&gt;Ustawienie per użytkownika &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gsettings &amp;quot;set&amp;quot; &amp;quot;org.gnome.settings-daemon.plugins.xsettings&amp;quot; &amp;quot;antialiasing&amp;quot; &amp;quot;rgba&amp;quot;    
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ustawienia globalne przez mechanizm fontconfig (zalecane)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/10-sub-pixel-rgb.conf    
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;W konfiguracji tych opcji można nam pomóc &lt;a href=&quot;https://wiki.gnome.org/action/show/Apps/GnomeTweakTool?action=show&amp;redirect=GnomeTweakTool&quot;&gt;gnome-tweak-tool&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;yum install gnome-tweak-tool
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Efekt konfiguracji można zweryfikować poleceniem &lt;code&gt;xrdb -query&lt;/code&gt; &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Xft.antialias:  1
+      <description>&amp;lt;h2&amp;gt;Czcionki&amp;lt;/h2&amp;gt;&amp;lt;p&amp;gt;Silnik renderowania czcionek z włączonym renderowaniem subpikselowym - możemy go legalnie używać, ponieważ nie obowiązują w naszym kraju patenty na oprogramowanie.&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo yum install freetype-freeworld
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Nie polecam korzystania z &amp;lt;a href=&amp;quot;http://www.infinality.net/blog/&amp;quot;&amp;gt;Infinality&amp;lt;/a&amp;gt; projekt najwyraźniej nie jest już dłużej rozwijany (ostatnia wydanie jest z 2013-05-15). Pojawił się za to nowy projekt &amp;lt;a href=&amp;quot;http://bohoomil.com/&amp;quot;&amp;gt;http://bohoomil.com/&amp;lt;/a&amp;gt;, aktualnie bez wsparcia dla Fedory. &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://code.google.com/p/noto/&amp;quot;&amp;gt;Google noto fonts&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo yum install google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-symbols-fonts  
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://www.google.com/fonts/specimen/Roboto&amp;quot;&amp;gt;Google Roboto fonts&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo yum install &amp;amp;quot;google-roboto-*&amp;amp;quot;
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://www.levien.com/type/myfonts/inconsolata.html&amp;quot;&amp;gt;Inconsolata&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo yum install levien-inconsolata-fonts                  
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;h2&amp;gt;Konfiguracja czcionek&amp;lt;/h2&amp;gt;&amp;lt;p&amp;gt;Jeśli korzystamy z monitora LCD należy ustawić odpowiedni filtr &amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo ln -s /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/11-lcdfilter-default.conf
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Hinting i wygładzanie RGB&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;gsettings &amp;amp;quot;set&amp;amp;quot; &amp;amp;quot;org.gnome.settings-daemon.plugins.xsettings&amp;amp;quot; &amp;amp;quot;hinting&amp;amp;quot; &amp;amp;quot;slight&amp;amp;quot;     
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Aby poprawnie ustawić wygładzanie RGB należy &amp;lt;a href=&amp;quot;http://www.lagom.nl/lcd-test/subpixel.php&amp;quot;&amp;gt;sprawdzić posiadaną matrycę&amp;lt;/a&amp;gt;. &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Ustawienie per użytkownika &amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;gsettings &amp;amp;quot;set&amp;amp;quot; &amp;amp;quot;org.gnome.settings-daemon.plugins.xsettings&amp;amp;quot; &amp;amp;quot;antialiasing&amp;amp;quot; &amp;amp;quot;rgba&amp;amp;quot;    
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Ustawienia globalne przez mechanizm fontconfig (zalecane)&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/10-sub-pixel-rgb.conf    
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;W konfiguracji tych opcji można nam pomóc &amp;lt;a href=&amp;quot;https://wiki.gnome.org/action/show/Apps/GnomeTweakTool?action=show&amp;amp;redirect=GnomeTweakTool&amp;quot;&amp;gt;gnome-tweak-tool&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;yum install gnome-tweak-tool
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Efekt konfiguracji można zweryfikować poleceniem &amp;lt;code&amp;gt;xrdb -query&amp;lt;/code&amp;gt; &amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;Xft.antialias:  1
 Xft.dpi:    120
 Xft.hinting:    1
 Xft.hintstyle:  hintfull
 Xft.lcdfilter:  lcddefault
 Xft.rgba:   rgb
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Własne konfiguracje dla czcionek należy umieszczać w katalogu &lt;code&gt;~/.config/fontconfig/conf.d&lt;/code&gt; lub pliku &lt;code&gt;~/.config/fontconfig/fonts.conf&lt;/code&gt;.&lt;/p&gt;&lt;h2&gt;Warto poczytać:&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.happyassassin.net/2014/01/17/fonts-and-font-sizes-in-fedora-on-the-internet-hold-onto-your-hats/&quot;&gt;Fonts and font sizes in Fedora on the internet: hold onto your hats…&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.binarytides.com/gorgeous-looking-fonts-ubuntu-linux/&quot;&gt;How to get gorgeous looking fonts on ubuntu linux&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.andreas-haerter.com/2011/07/18/tune-improve-fedora-fonts-typeface-ubuntu-like-sharp-fonts&quot;&gt;How to change Fedora&apos;s font rendering to get an Ubuntu-like result&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://wiki.gentoo.org/wiki/Fontconfig&quot;&gt;Gentoo Wiki - Fontconfig&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-	</description>
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;Własne konfiguracje dla czcionek należy umieszczać w katalogu &amp;lt;code&amp;gt;~/.config/fontconfig/conf.d&amp;lt;/code&amp;gt; lub pliku &amp;lt;code&amp;gt;~/.config/fontconfig/fonts.conf&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;h2&amp;gt;Warto poczytać:&amp;lt;/h2&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://www.happyassassin.net/2014/01/17/fonts-and-font-sizes-in-fedora-on-the-internet-hold-onto-your-hats/&amp;quot;&amp;gt;Fonts and font sizes in Fedora on the internet: hold onto your hats…&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://www.binarytides.com/gorgeous-looking-fonts-ubuntu-linux/&amp;quot;&amp;gt;How to get gorgeous looking fonts on ubuntu linux&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://blog.andreas-haerter.com/2011/07/18/tune-improve-fedora-fonts-typeface-ubuntu-like-sharp-fonts&amp;quot;&amp;gt;How to change Fedora&amp;#39;s font rendering to get an Ubuntu-like result&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://wiki.gentoo.org/wiki/Fontconfig&amp;quot;&amp;gt;Gentoo Wiki - Fontconfig&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;</description>	  
+    </item>
+
+    <item>
+      <title>Informative Git Prompt with Fish</title>
+      <link>http://mariuszs.github.io/blog//blog/2013/gitkata.html</link>
+      <pubDate>Wt, 3 gru 2013 00:00:00 +0100</pubDate>
+      <guid isPermaLink="false">blog/2013/gitkata.html</guid>
+      <description>&amp;lt;p&amp;gt;I&amp;#39;m using &amp;lt;a href=&amp;quot;https://github.com/fish-shell/fish-shell/blob/master/share/functions/__fish_git_prompt.fish&amp;quot;&amp;gt;Informative git prompt&amp;lt;/a&amp;gt; with &amp;lt;a href=&amp;quot;http://fishshell.com/&amp;quot;&amp;gt;Fish shell&amp;lt;/a&amp;gt;. &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;To configure informative git prompt in Fish shell run &amp;lt;code&amp;gt;fish_config&amp;lt;/code&amp;gt; from command line. In browser window select&amp;lt;br/&amp;gt;&amp;lt;strong&amp;gt;prompt&amp;lt;/strong&amp;gt; and mark &amp;lt;strong&amp;gt;Informative Git Prompt&amp;lt;/strong&amp;gt;. To enable selected prompt click &amp;lt;strong&amp;gt;use prompt&amp;lt;/strong&amp;gt;.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;My prompt configuration:&amp;lt;/p&amp;gt;
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;set -g __fish_git_prompt_show_informative_status 1
+set -g __fish_git_prompt_hide_untrackedfiles 1
+
+set -g __fish_git_prompt_color_branch magenta bold
+set -g __fish_git_prompt_showupstream &amp;amp;quot;informative&amp;amp;quot;
+set -g __fish_git_prompt_char_upstream_ahead &amp;amp;quot;↑&amp;amp;quot;
+set -g __fish_git_prompt_char_upstream_behind &amp;amp;quot;↓&amp;amp;quot;
+set -g __fish_git_prompt_char_upstream_prefix &amp;amp;quot;&amp;amp;quot;
+
+set -g __fish_git_prompt_char_stagedstate &amp;amp;quot;●&amp;amp;quot;
+set -g __fish_git_prompt_char_dirtystate &amp;amp;quot;✚&amp;amp;quot;
+set -g __fish_git_prompt_char_untrackedfiles &amp;amp;quot;…&amp;amp;quot;
+set -g __fish_git_prompt_char_conflictedstate &amp;amp;quot;✖&amp;amp;quot;
+set -g __fish_git_prompt_char_cleanstate &amp;amp;quot;✔&amp;amp;quot;
+
+set -g __fish_git_prompt_color_dirtystate blue
+set -g __fish_git_prompt_color_stagedstate yellow
+set -g __fish_git_prompt_color_invalidstate red
+set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
+set -g __fish_git_prompt_color_cleanstate green bold
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&amp;lt;p&amp;gt;You can customize this configuration by editing &amp;lt;code&amp;gt;~/.config/fish/config.fish&amp;lt;/code&amp;gt; and overwriting variables.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Related: &amp;lt;/p&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/magicmonty/bash-git-prompt&amp;quot;&amp;gt;Informative git prompt for bash&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/mariuszs/informative_git_prompt&amp;quot;&amp;gt;Informative GIT Prompt for Fish shell&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;https://github.com/olivierverdier/zsh-git-prompt&amp;quot;&amp;gt;Informative git prompt for zsh&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;http://sebastiancelis.com/2009/11/16/zsh-prompt-git-users/&amp;quot;&amp;gt;A zsh prompt for Git users&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;</description>	  
     </item>
 
   </channel> 

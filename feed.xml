@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JBake</title>
-    <link>http://jbake.org</link>
-    <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://mariuszs.github.io/blog/</link>
+    <atom:link href="http://mariuszs.github.io/blog//feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>So, 11 paź 2014 16:13:48 +0200</pubDate>
-    <lastBuildDate>So, 11 paź 2014 16:13:48 +0200</lastBuildDate>
+    <pubDate>So, 11 paź 2014 16:25:41 +0200</pubDate>
+    <lastBuildDate>So, 11 paź 2014 16:25:41 +0200</lastBuildDate>
 
     <item>
-      <title>Fedora 21</title>
-      <link>http://jbake.org/blog/2014/first-post.html</link>
+      <title>Czcionki w Fedorze</title>
+      <link>http://mariuszs.github.io/blog//blog/2014/fedora-fonts.html</link>
       <pubDate>So, 11 paź 2014 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2014/first-post.html</guid>
+      <guid isPermaLink="false">blog/2014/fedora-fonts.html</guid>
       	<description>
 	&lt;h2&gt;Czcionki&lt;/h2&gt;&lt;p&gt;Silnik renderowania czcionek z włączonym renderowaniem subpikselowym - możemy go legalnie używać, ponieważ nie obowiązują w naszym kraju patenty na oprogramowanie.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo yum install freetype-freeworld
@@ -23,9 +23,7 @@
 &lt;pre&gt;&lt;code&gt;sudo yum install &amp;quot;google-roboto-*&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&quot;http://www.levien.com/type/myfonts/inconsolata.html&quot;&gt;Inconsolata&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo yum install levien-inconsolata-fonts                  
-&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Konfiguracja czcionek&lt;/h2&gt;&lt;p&gt;Jeśli korzystamy z monitora LCD należy ustawić odpowiedni filtr poprzez&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;Xft.lcdfilter: lcddefault&amp;quot; &amp;gt; ~/.Xresources
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;lub dla całego systemu &lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;Konfiguracja czcionek&lt;/h2&gt;&lt;p&gt;Jeśli korzystamy z monitora LCD należy ustawić odpowiedni filtr &lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo ln -s /usr/share/fontconfig/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/11-lcdfilter-default.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Hinting i wygładzanie RGB&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;gsettings &amp;quot;set&amp;quot; &amp;quot;org.gnome.settings-daemon.plugins.xsettings&amp;quot; &amp;quot;hinting&amp;quot; &amp;quot;slight&amp;quot;     
